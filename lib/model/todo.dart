@@ -6,6 +6,7 @@ class Todo {
   String _date;
 
   Todo(this._title, this._priority, this._date, [this._description]);
+  //[this.description] is optional parameter hence enclosed in []
 
   Todo.withId(this._id, this._title, this._priority, this._date,[this._description]);
 
