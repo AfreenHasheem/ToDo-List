@@ -1,16 +1,33 @@
-# to_do_list
 
-A new Flutter project.
 
-## Getting Started
+A Flutter app built with SQFLite(SQL plugin for flutter)
 
-This project is a starting point for a Flutter application.
+Model Class:
 
-A few resources to get you started if this is your first Flutter project:
+1. The model class consists of the below private variables along with their Getters and Setters:
+```
+  int _id;
+  String _title;
+  String _description;
+  int _priority;
+  String _date;
+  
+  ```
+  No setter for _id as the value of Id will never change.
+  
+  2. It contains 2 constructors:
+  ```
+  Todo(this._title, this._priority, this._date, [this._description]);
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+  Todo.withId(this._id, this._title, this._priority, this._date,[this._description]);
+  ```
+3. The class also contains a Map method to transform the Todo into a Map:
+```
+ Map <String, dynamic> toMap();
+ ```
+ 4. The below method takes in an object and transforms it into Todo (exactly opposite to the funcatioanlity of Map() 
+ ```
+ Todo.fromObject(dynamic o)
+ ```
+ 
+ 
