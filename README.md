@@ -13,6 +13,8 @@ Model Class:
   String _date;
   
   ```
+  No setter for _id as the value of Id will never change.
+  
   2. It contains 2 constructors:
   ```
   Todo(this._title, this._priority, this._date, [this._description]);
