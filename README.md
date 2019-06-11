@@ -45,12 +45,12 @@ factory DbHelper(){
     return _dbHelper;
   }
   ```
-3. Future<Database> initializeDb() : returns a Future object of type database that will be availabe sometime in the future.
-    getApplicationDocumentsDirectory() : This is from the io package. Returns directory for the documents of our app. 
-    String path : contains the path of the directory and name of the table.
-    _createDb() : launches an SQL query to create the database.
-    static Database _db : variable that contains the database throught the class.
-    get db async () : Checks if DB is null. If null initializes and creates a DB, then returns the DB. 
+3. ```Future<Database> initializeDb() ``` :returns a Future object of type database that will be availabe sometime in the future.
+   ``` getApplicationDocumentsDirectory() ```: This is from the io package. Returns directory for the documents of our app. 
+   ``` String path``` : contains the path of the directory and name of the table.
+   ``` _createDb() ```: launches an SQL query to create the database.
+    ```static Database _db ```: variable that contains the database throught the class.
+    ```get db async () ```: Checks if DB is null. If null initializes and creates a DB, then returns the DB. 
   
  
  
