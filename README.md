@@ -45,12 +45,17 @@ factory DbHelper(){
     return _dbHelper;
   }
   ```
-3. ```Future<Database> initializeDb() ``` :returns a Future object of type database that will be availabe sometime in the future.
+3. ```Future<Database> initializeDb() ``` : Creates or initializes the DB
+returns a Future object of type database that will be availabe sometime in the future.
    ``` getApplicationDocumentsDirectory() ```: This is from the io package. Returns directory for the documents of our app. 
    ``` String path``` : contains the path of the directory and name of the table.
    ``` _createDb() ```: launches an SQL query to create the database.
     ```static Database _db ```: variable that contains the database throught the class.
     ```get db async () ```: Checks if DB is null. If null initializes and creates a DB, then returns the DB. 
+    
+4. ```Future<List> getTodos() async{}```: Create a method that will return all the Todos in a list.
+5. ```Future<int> getCount() async{}``` : Get number of records in ur table
+6. ```Future<int> updateTodo(Todo todo) async{}```:to update the table
   
  
  
