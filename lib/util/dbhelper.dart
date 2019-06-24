@@ -39,7 +39,6 @@ class DbHelper {
     getApplicationDocumentsDirectory() is from the path provider package.
     It returns the directory for the documents of our app*/
     Directory directory = await getApplicationDocumentsDirectory();
-
     //path contains directory + name of the database
     String path = directory.path + "todo.db";
 
@@ -69,6 +68,7 @@ class DbHelper {
     In the map, the keys of the values must be the name of the fields*/
     var result = await db.insert(tableTodo, todo.toMap());
     return result;//the result should contain the id of the item that was inserted
+
   }
 
   //Create a method that will return all the Todos
