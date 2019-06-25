@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     helper.initializeDb().then(
         (result) => helper.getTodos().then((result) => todos = result));
     DateTime today = DateTime.now();
-    Todo todo = Todo("Buy Apples", 1, today.toString(), "And make sure they are good");
+    Todo todo = Todo("Buy Melons", 3, today.toString(), "And make sure they are good");
     var result = helper.insertTodo(todo);
 
 

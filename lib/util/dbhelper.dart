@@ -97,7 +97,7 @@ class DbHelper {
 
   }
 
-  //to delete a recored in the database
+  //to delete a recorded in the database
   Future<int> deleteTodo(int id) async{
     var db = await this.db;
     int result = await db.rawDelete('DELETE FROM $tableTodo WHERE $colId = $id');
