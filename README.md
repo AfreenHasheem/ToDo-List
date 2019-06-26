@@ -56,6 +56,11 @@ returns a Future object of type database that will be availabe sometime in the f
 4. ```Future<List> getTodos() async{}```: Create a method that will return all the Todos in a list.
 5. ```Future<int> getCount() async{}``` : Get number of records in ur table
 6. ```Future<int> updateTodo(Todo todo) async{}```:to update the table
+
+In screens folder added todolist.dart :
+```ListView todoListItems() ``` - Shows the avatar circles in red, orange or green depending on the priority.
+```void getData() ``` - Initializes the DB or creates it if it doesn't exist, adds objects to the TODO List, and prints the selected item.
+```Color getColor(int priority)``` - Switch cases and selects color depending on the priority.
   
  
  
