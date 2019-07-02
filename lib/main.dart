@@ -18,7 +18,6 @@ class MyApp extends StatelessWidget {
 //    Todo todo = Todo("Buy Oranges", 2, today.toString(), "And make sure they are good");
 //    var result = helper.insertTodo(todo);
 
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',

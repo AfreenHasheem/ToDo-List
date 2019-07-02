@@ -68,7 +68,6 @@ class DbHelper {
     In the map, the keys of the values must be the name of the fields*/
     var result = await db.insert(tableTodo, todo.toMap());
     return result;//the result should contain the id of the item that was inserted
-
   }
 
   //Create a method that will return all the Todos
@@ -94,7 +93,6 @@ class DbHelper {
     var db = await this.db;
     var result = await db.update(tableTodo, todo.toMap(), where: "$colId = ?", whereArgs: [todo.id]);
     return result;
-
   }
 
   //to delete a recorded in the database
@@ -103,5 +101,4 @@ class DbHelper {
     int result = await db.rawDelete('DELETE FROM $tableTodo WHERE $colId = $id');
     return result;
   }
-
 }

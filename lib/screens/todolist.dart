@@ -79,8 +79,7 @@ class TodoListState extends State {
     });
   }
 
-
-  Color getColor(int priority) {
+  Color getColor(int priority){
     switch(priority){
       case 1:
         return Colors.red;
@@ -102,11 +101,9 @@ class TodoListState extends State {
   void navigateToDetail(Todo todo) async {
   bool result = await Navigator.push(context,
       MaterialPageRoute(builder: (context) => TodoDetail(todo)),
-
-
-
   );
-
-
+  if(result == true){
+    getData();
+  }
   }
 }
