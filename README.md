@@ -57,10 +57,18 @@ returns a Future object of type database that will be availabe sometime in the f
 5. ```Future<int> getCount() async{}``` : Get number of records in ur table
 6. ```Future<int> updateTodo(Todo todo) async{}```:to update the table
 
-In screens folder added todolist.dart :
+In screens folder added -
+todolist.dart :
 ```ListView todoListItems() ``` - Shows the avatar circles in red, orange or green depending on the priority.
 ```void getData() ``` - Initializes the DB or creates it if it doesn't exist, adds objects to the TODO List, and prints the selected item.
 ```Color getColor(int priority)``` - Switch cases and selects color depending on the priority.
+tododetail.dart :
+Has a column that contains 2 text fields (Title & description) and 1 Dropdown Menu(Low, Medium and High)
+
+``` void select()```: Has a switch statement with methods for Saving a menu, deleting a menu and Editiong a menu.
+```void updatePriority()```: Updates the list if the priority has been edited and saved.
+```void updateTitle() ```: Updates the title when edited and updated.
+```void updateDescription()```: Updates the description when edited and updated.
   
  
  
